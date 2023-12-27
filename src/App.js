@@ -68,10 +68,10 @@ function App() {
 
   const handleItemClick = (index) => {
     //버튼클릭시 isPaused값을 변경 -> true일때는 week
-    setPaused(true); // true값이 들어와서 useEffect 건너뜀
+    setPaused(true); // true값이 들어와서 useEffect 건너뜀 week번호 그래도라서 요일 안바뀜
     weekchange(index); // 번호변경하고 랜더링시작 그래서 강제로 실행함
 
-    setTimeout(() => { // 3초뒤에 
+    setTimeout(() => { // 3초뒤에 자동실행 시작됨
       setPaused(false); // 값이 변경되면서 랜더링할때 weekUpdate함수실행 그래서 
       //weekchange(index); 할필요없음 useEffect에서 있음
     }, 3000)
@@ -81,6 +81,8 @@ function App() {
   useEffect(() => {
     const intervalId = setInterval(weekUpdate, 2000);
     // isPaused에 따라 실행과 실행안함을 번갈아 가면서 진행
+    // 2개 변경변수가 바뀌면 진행되지만
+    // isPaused값이 true이면 week값이 변경되지않아서 자동롤링을 못한다.( 랜더링 안해주니깐 )
     return () => clearInterval(intervalId);
   }, [week, isPaused]);
 
