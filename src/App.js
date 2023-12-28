@@ -9,37 +9,44 @@ const weekcon = () => [
   {
     yoil: "월",
     subject: "월요일싫어",
-    content: "그냥월요일싫어"
+    content: "그냥월요일싫어",
+    bannersrc: "rgb(239 82 83)"
   },
   {
     yoil: "화",
     subject: "화요일싫어",
-    content: "그냥화요일싫어"
+    content: "그냥화요일싫어",
+    bannersrc: "#ff9671"
   },
   {
     yoil: "수",
     subject: "수요일싫어",
-    content: "그냥수요일싫어"
+    content: "그냥수요일싫어",
+    bannersrc: "#ffc75f"
   },
   {
     yoil: "목",
     subject: "목요일싫어",
-    content: "그냥목요일싫어"
+    content: "그냥목요일싫어",
+    bannersrc: "#f9f871"
   },
   {
     yoil: "금",
     subject: "금요일좋아",
-    content: "내일주말이야"
+    content: "내일주말이야",
+    bannersrc: "#008f7a"
   },
   {
     yoil: "토",
     subject: "토요일좋아",
-    content: "근데왜이리빨리가?"
+    content: "근데왜이리빨리가?",
+    bannersrc: "#2c73d2"
   },
   {
     yoil: "일",
     subject: "일요일좋아",
-    content: "왜벌써내일월요일?"
+    content: "왜벌써내일월요일?",
+    bannersrc: "#f8452ec2"
   }
 ]
 // 외부 함수에 접근하기 위해서 함수로 선언
