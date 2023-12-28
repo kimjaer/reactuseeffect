@@ -70,17 +70,24 @@ function App() {
 
   return (
     // weekcon.map((e, i) => {
-      
+
     // })
-    <div className="App" style={{overflow:'hidden'}}>
+    <div className="App" style={{ overflow: 'hidden' }}>
       <div style={{ display: "flex", width: widthset, transition: "0.5s", marginLeft: -(document.body.offsetWidth * week) }}>
         {
           weekcontent.map((v, i) => {
-            return <div key={i} style={{ height: "50vh", width: document.body.offsetWidth ,backgroundColor: v.bannersrc }}>
-          <div>
-            <strong>{v.subject}</strong>
-            <p>{v.content}</p>
-          </div>
+            return <div key={i} style={{ height: "50vh", width: document.body.offsetWidth, backgroundColor: v.bannersrc }}>
+              <div>
+                <strong>{v.subject}</strong>
+                <p>{v.content.split("|").map((vv, ii) => {
+                  return (
+                    <>
+                      {vv}
+                      <br></br>
+                    </>
+                  )
+                })}</p>
+              </div>
             </div>
           })
         }
