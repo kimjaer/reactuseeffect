@@ -73,7 +73,7 @@ function App() {
       
     // })
     <div className="App" style={{overflow:'hidden'}}>
-      <div style={{ display: "flex", width: widthset }}>
+      <div style={{ display: "flex", width: widthset, transition: "0.5s", marginLeft: -(document.body.offsetWidth * week) }}>
         {
           weekcontent.map((v, i) => {
             return <div key={i} style={{ height: "50vh", width: document.body.offsetWidth ,backgroundColor: v.bannersrc }}>
